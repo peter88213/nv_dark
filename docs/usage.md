@@ -16,7 +16,8 @@ If the *nv_themes* plugin is installed, uninstall it via the plugin manager.
 
 # Restoring the original colors
 
-After uninstalling the *nv_dark* plugin, you can restore the default colors by deleting the *novx.ini* configuration file. 
+After uninstalling the *nv_dark* plugin via the plugin manager, close *novelibre*.
+Then open the installation directory and run **restore_default_colors.py**. 
 
 ---
 

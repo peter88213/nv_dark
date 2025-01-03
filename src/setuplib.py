@@ -82,6 +82,10 @@ def main(zipped=True):
 
         # Install the themes.
         copy_tree('themes', applicationDir)
+
+        # Install utility.
+        copy_file('restore_default_colors.py', applicationDir)
+
         output(f'Sucessfully installed "{PLUGIN}" at "{os.path.normpath(pluginDir)}"')
     else:
         output(f'ERROR: Cannot find a novelibre installation at "{applicationDir}"')
