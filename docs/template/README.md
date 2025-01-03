@@ -9,6 +9,8 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 ## Requirements
 
 - [novelibre](https://github.com/peter88213/novelibre/) version 5.4+
+- If the *nv_themes* plugin is installed, uninstall it via the plugin manager.
+
 
 ## Download and install
 
