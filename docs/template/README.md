@@ -4,7 +4,7 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 
 *nv_dark* is a plugin providing a dark theme for novelibre. 
 
-![Screenshot](docs/Screenshots/screen01.png)
+![Screenshot](docs/Screenshots/screen01.jpg)
 
 ## Requirements
 
