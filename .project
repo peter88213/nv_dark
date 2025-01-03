@@ -3,6 +3,7 @@
 	<name>nv_dark</name>
 	<comment></comment>
 	<projects>
+		<project>novelibre</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
