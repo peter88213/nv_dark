@@ -10,7 +10,7 @@ A [novelibre](https://github.com/peter88213/novelibre/) plugin providing a dark 
 
 If [novelibre](https://github.com/peter88213/novelibre/) is installed, the setup script *setup.py* installs the *nv_dark* plugin in the *novelibre* plugin directory.
 
-If the *nv_themes* plugin is installed, uninstall it via the plugin manager.
+If the *nv_themes* plugin is installed, it will be removed automatically.
 
 ---
 

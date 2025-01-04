@@ -6,17 +6,20 @@ Copyright (c) 2025 Peter Triesberger
 For further information see https://github.com/peter88213/nv_dark
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
-from shutil import copytree
-from shutil import copy2
-import zipfile
-import os
-import sys
-from pathlib import Path
 try:
     from tkinter import *
 except ModuleNotFoundError:
     print('The tkinter module is missing. Please install the tk support package for your python3 version.')
     sys.exit(1)
+from configparser import ConfigParser
+import os
+from pathlib import Path
+from shutil import copy2
+from shutil import copytree
+import sys
+import zipfile
+
+from nv_dark import Plugin
 
 PLUGIN = 'nv_dark.py'
 VERSION = ' @release'
@@ -50,6 +53,16 @@ def output(text):
     processInfo.config(text=('\n').join(message))
 
 
+def set_colors(iniFile):
+    output(f'Setting up the dark mode colors ...\n')
+    config = ConfigParser()
+    config.read(iniFile, encoding='utf-8')
+    for color in Plugin.COLORS:
+        config['SETTINGS'][color] = Plugin.COLORS[color]
+    with open(iniFile, 'w', encoding='utf-8') as f:
+        config.write(f)
+
+
 def main(zipped=True):
     if zipped:
         copy_file = extract_file
@@ -77,6 +90,15 @@ def main(zipped=True):
     if os.path.isdir(applicationDir):
         pluginDir = f'{applicationDir}/plugin'
         os.makedirs(pluginDir, exist_ok=True)
+
+        # Uninstall nv_themes, if any.
+        nvThemesPlugin = f'{pluginDir}/nv_themes.py'
+        if os.path.isfile(nvThemesPlugin):
+            if not messagebox.askokcancel('Incompatible plugin detected', 'The "nv_themes" plugin will now be uninstalled.'):
+                sys.exit()
+
+            os.remove(nvThemesPlugin)
+
         output(f'Copying "{PLUGIN}" ...')
         copy_file(PLUGIN, pluginDir)
 
@@ -85,6 +107,9 @@ def main(zipped=True):
 
         # Install utility.
         copy_file('restore_default_colors.py', applicationDir)
+
+        # Set up the dark mode colors
+        set_colors(f'{applicationDir}/config/novx.ini')
 
         output(f'Sucessfully installed "{PLUGIN}" at "{os.path.normpath(pluginDir)}"')
     else:

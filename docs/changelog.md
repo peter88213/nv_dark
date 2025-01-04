@@ -4,6 +4,10 @@
 
 ## Changelog
 
+### Version 0.3.1
+
+- Auto-uninstalling the nv_themes plugin. Closes #2.
+- Setting up the dark mode colors during the installation.
 
 ### Version 0.3.0
 
