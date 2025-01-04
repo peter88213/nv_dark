@@ -2,23 +2,20 @@
 
 Applies the 'awdark' theme, if available. 
 
-Installation: 
-
-- Copy this file into the 'plugin' subdirectory of your novelibre installation folder 
-  (e.g. ~/.novx/novelibre).
-- Download the zipped tcl-awthemes package from https://sourceforge.net/projects/tcl-awthemes/
-- Unpack the awthemes<version> folder and remove the version from the folder's name.
-- Make sure there's a 'themes' subdirectory in your novelibre installation folder. 
-- Put the 'awthemes' folder into the 'themes' directory.
-
-The installation routine changes colors; this will take effect after a novelibre restart.
-To restore the default colors after having uninstalled the plugin, close novelibre,
-and delete the novx.ini file in the novelibre/config directory.
-
 Requires Python 3.6+
 Copyright (c) 2025 Peter Triesberger
 For further information see https://github.com/peter88213/nv_dark
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 """
 from pathlib import Path
 from tkinter import messagebox
