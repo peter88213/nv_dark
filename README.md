@@ -1,3 +1,8 @@
+[![Download the latest release](docs/img/download-button.png)](https://github.com/peter88213/nv_dark/raw/main/dist/nv_dark_v0.3.1.pyzw)
+[![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
+[![News/Feedback](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions)
+
+
 # nv_dark
 
 The [novelibre](https://github.com/peter88213/novelibre/) Python program helps authors organize novels.  
