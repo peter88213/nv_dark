@@ -9,6 +9,9 @@
 - Auto-uninstalling the nv_themes plugin. Closes #2.
 - Setting up the dark mode colors during the installation.
 
+Compatibility: novelibre version 5.4 API
+
+
 ### Version 0.3.0
 
 - Add a utility to restore the default colors. Closes #1.
