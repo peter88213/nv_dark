@@ -52,7 +52,7 @@ The package is also available in zip format: [nv_dark_v0.3.1.zip](https://github
 
 ## Usage
 
-See the [online manual](docs/usage.md)
+See the [instructions for use](docs/usage.md)
 
 ---
 
