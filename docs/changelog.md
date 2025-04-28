@@ -4,6 +4,14 @@
 
 ## Changelog
 
+
+### Version 0.4.0
+
+- Providing a Help menu entry.
+
+Compatibility: novelibre version 5.4 API
+
+
 ### Version 0.3.1
 
 - Auto-uninstalling the nv_themes plugin. Closes #2.
