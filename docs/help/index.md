@@ -17,7 +17,7 @@ you might be asked for a program restart to set the
 
 ---
 
-# Restoring the original colors
+## Restoring the original colors
 
 After uninstalling the *nv_dark* plugin via the plugin manager, close *novelibre*.
 Then open the installation directory and run `restore_default_colors.py`. 
