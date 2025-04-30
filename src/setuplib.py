@@ -6,27 +6,29 @@ Copyright (c) 2025 Peter Triesberger
 For further information see https://github.com/peter88213/nv_dark
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
-try:
-    from tkinter import *
-except ModuleNotFoundError:
-    print('The tkinter module is missing. Please install the tk support package for your python3 version.')
-    sys.exit(1)
 from configparser import ConfigParser
 import os
 from pathlib import Path
 from shutil import copy2
 from shutil import copytree
 import sys
+from tkinter import messagebox
 import zipfile
 
 from nv_dark import Plugin
+
+try:
+    import tkinter as tk
+except ModuleNotFoundError:
+    print('The tkinter module is missing. Please install the tk support package for your python3 version.')
+    sys.exit(1)
 
 PLUGIN = 'nv_dark.py'
 VERSION = ' @release'
 THEMES_PATH = 'themes/'
 
-root = Tk()
-processInfo = Label(root, text='')
+root = tk.Tk()
+processInfo = tk.Label(root, text='')
 message = []
 
 pyz = os.path.dirname(__file__)
@@ -78,7 +80,7 @@ def main(zipped=True):
     # Open a tk window.
     root.title('Setup')
     output(f'*** Installing {PLUGIN}{VERSION} ***\n')
-    header = Label(root, text='')
+    header = tk.Label(root, text='')
     header.pack(padx=5, pady=5)
 
     # Prepare the messaging area.
@@ -115,7 +117,7 @@ def main(zipped=True):
     else:
         output(f'ERROR: Cannot find a novelibre installation at "{applicationDir}"')
 
-    root.quitButton = Button(text="Quit", command=quit)
+    root.quitButton = tk.Button(text="Quit", command=quit)
     root.quitButton.config(height=1, width=30)
     root.quitButton.pack(padx=5, pady=5)
     root.mainloop()
