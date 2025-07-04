@@ -7,7 +7,12 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 from pathlib import Path
 
-print('Restoring novelibre default colors. Please make sure that novelibre is not running.')
+print(
+    (
+        'Restoring novelibre default colors. '
+        'Please make sure that novelibre is not running.'
+    )
+)
 homePath = str(Path.home()).replace('\\', '/')
 configFile = f'{homePath}/.novx/config/novx.ini'
 

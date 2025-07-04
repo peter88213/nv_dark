@@ -67,14 +67,19 @@ class Plugin:
         # Load custom theme. Exceptions are caught by the application.
         homeDir = str(Path.home()).replace('\\', '/')
         themePath = f'{homeDir}/{self.THEME_DIR}'
-        self._ui.root.tk.call('lappend', 'auto_path', f'{themePath}/{self.THEME_PACKAGE}')
+        self._ui.root.tk.call(
+            'lappend',
+            'auto_path',
+            f'{themePath}/{self.THEME_PACKAGE}',
+        )
         self._ui.root.tk.call('package', 'require', self.THEME)
         self._ui.guiStyle.theme_use(self.THEME)
 
         # Adjust the colors. This will take effect after restart.
         # Note: The changes wil be stored in the novx.ini file
         #       in the novelibre/config directory.
-        #       To restore the default colors, you will have to close novelibre
+        #       To restore the default colors,
+        #       you will have to close novelibre
         #       and delete novx.ini.
         prefs = self._ctrl.get_preferences()
         colorsChanged = False
@@ -83,10 +88,16 @@ class Plugin:
                 prefs[color] = self.COLORS[color]
                 colorsChanged = True
         if colorsChanged:
-            messagebox.showinfo('Dark theme installer', 'Please restart novelibre now to apply changed colors.')
+            messagebox.showinfo(
+                'Dark theme installer',
+                'Please restart novelibre now to apply changed colors.'
+            )
 
         # Add an entry to the Help menu.
-        self._ui.helpMenu.add_command(label='nv_dark Online help', command=self.open_help)
+        self._ui.helpMenu.add_command(
+            label='nv_dark Online help',
+            command=self.open_help,
+        )
 
     def open_help(self):
         webbrowser.open(self.HELP_URL)
