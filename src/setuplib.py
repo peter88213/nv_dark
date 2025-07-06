@@ -20,7 +20,12 @@ from nv_dark import Plugin
 try:
     import tkinter as tk
 except ModuleNotFoundError:
-    print('The tkinter module is missing. Please install the tk support package for your python3 version.')
+    print(
+        (
+            'The tkinter module is missing. '
+            'Please install the tk support package for your python3 version.'
+        )
+    )
     sys.exit(1)
 
 PLUGIN = 'nv_dark.py'
@@ -96,7 +101,10 @@ def main(zipped=True):
         # Uninstall nv_themes, if any.
         nvThemesPlugin = f'{pluginDir}/nv_themes.py'
         if os.path.isfile(nvThemesPlugin):
-            if not messagebox.askokcancel('Incompatible plugin detected', 'The "nv_themes" plugin will now be uninstalled.'):
+            if not messagebox.askokcancel(
+                    'Incompatible plugin detected',
+                    'The "nv_themes" plugin will now be uninstalled.'
+            ):
                 sys.exit()
 
             os.remove(nvThemesPlugin)
@@ -113,10 +121,20 @@ def main(zipped=True):
         # Set up the dark mode colors
         set_colors(f'{applicationDir}/config/novx.ini')
 
-        output(f'Sucessfully installed "{PLUGIN}" at "{os.path.normpath(pluginDir)}"')
+        # Show a success message.
+        output(
+            (
+                f'Sucessfully installed "{PLUGIN}" '
+                f'at "{os.path.normpath(pluginDir)}".'
+            )
+        )
     else:
-        output(f'ERROR: Cannot find a novelibre installation at "{applicationDir}"')
-
+        output(
+            (
+                'ERROR: Cannot find a novelibre installation '
+                f'at "{os.path.normpath(applicationDir)}".'
+            )
+        )
     root.quitButton = tk.Button(text="Quit", command=quit)
     root.quitButton.config(height=1, width=30)
     root.quitButton.pack(padx=5, pady=5)
