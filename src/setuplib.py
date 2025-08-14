@@ -20,7 +20,7 @@ from nv_dark import Plugin
 try:
     import tkinter as tk
 except ModuleNotFoundError:
-    print(
+    input(
         (
             'The tkinter module is missing. '
             'Please install the tk support package for your python3 version.'
