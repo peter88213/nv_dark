@@ -17,24 +17,9 @@ import zipfile
 
 from nv_dark import Plugin
 
-try:
-    import tkinter as tk
-except ModuleNotFoundError:
-    input(
-        (
-            'The tkinter module is missing. '
-            'Please install the tk support package for your python3 version.'
-        )
-    )
-    sys.exit(1)
-
 PLUGIN = 'nv_dark.py'
 VERSION = ' @release'
 THEMES_PATH = 'themes/'
-
-root = tk.Tk()
-processInfo = tk.Label(root, text='')
-message = []
 
 pyz = os.path.dirname(__file__)
 
@@ -55,13 +40,8 @@ def cp_tree(sourceDir, targetDir):
     copytree(sourceDir, f'{targetDir}/{sourceDir}', dirs_exist_ok=True)
 
 
-def output(text):
-    message.append(text)
-    processInfo.config(text=('\n').join(message))
-
-
 def set_colors(iniFile):
-    output(f'Setting up the dark mode colors ...\n')
+    print(f'Setting up the dark mode colors ...\n')
     config = ConfigParser()
     config.read(iniFile, encoding='utf-8')
     for color in Plugin.COLORS:
@@ -82,16 +62,7 @@ def main(zipped=True):
     scriptDir = os.path.dirname(scriptPath)
     os.chdir(scriptDir)
 
-    # Open a tk window.
-    root.title('Setup')
-    output(f'*** Installing {PLUGIN}{VERSION} ***\n')
-    header = tk.Label(root, text='')
-    header.pack(padx=5, pady=5)
-
-    # Prepare the messaging area.
-    processInfo.pack(padx=5, pady=5)
-
-    # Install the plugin.
+    print(f'*** Installing {PLUGIN} {VERSION} ***')
     homePath = str(Path.home()).replace('\\', '/')
     applicationDir = f'{homePath}/.novx'
     if os.path.isdir(applicationDir):
@@ -109,7 +80,8 @@ def main(zipped=True):
 
             os.remove(nvThemesPlugin)
 
-        output(f'Copying "{PLUGIN}" ...')
+        # Install the plugin.
+        print(f'Copying "{PLUGIN}" ...')
         copy_file(PLUGIN, pluginDir)
 
         # Install the themes.
@@ -122,20 +94,14 @@ def main(zipped=True):
         set_colors(f'{applicationDir}/config/novx.ini')
 
         # Show a success message.
-        output(
-            (
-                f'Sucessfully installed "{PLUGIN}" '
-                f'at "{os.path.normpath(pluginDir)}".'
-            )
+        print(
+            f'Sucessfully installed "{PLUGIN}" '
+            f'at "{os.path.normpath(pluginDir)}".'
         )
     else:
-        output(
-            (
-                'ERROR: Cannot find a novelibre installation '
-                f'at "{os.path.normpath(applicationDir)}".'
-            )
+        print(
+            'ERROR: Cannot find a novelibre installation '
+            f'at "{os.path.normpath(applicationDir)}".'
         )
-    root.quitButton = tk.Button(text="Quit", command=quit)
-    root.quitButton.config(height=1, width=30)
-    root.quitButton.pack(padx=5, pady=5)
-    root.mainloop()
+
+    input('Press any key to quit.')
