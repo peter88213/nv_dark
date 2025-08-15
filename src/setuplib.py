@@ -62,7 +62,7 @@ def main(zipped=True):
     scriptDir = os.path.dirname(scriptPath)
     os.chdir(scriptDir)
 
-    print(f'*** Installing {PLUGIN} {VERSION} ***')
+    print(f'*** Installing {PLUGIN} {VERSION} ***\n')
     homePath = str(Path.home()).replace('\\', '/')
     applicationDir = f'{homePath}/.novx'
     if os.path.isdir(applicationDir):
@@ -95,7 +95,7 @@ def main(zipped=True):
 
         # Show a success message.
         print(
-            f'Sucessfully installed "{PLUGIN}" '
+            f'\nSucessfully installed {PLUGIN} '
             f'at "{os.path.normpath(pluginDir)}".'
         )
     else:
