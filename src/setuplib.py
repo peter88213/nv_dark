@@ -50,7 +50,7 @@ def set_colors(iniFile):
         config.write(f)
 
 
-def main(zipped=True):
+def install(zipped):
     if zipped:
         copy_file = extract_file
         copy_tree = extract_tree
@@ -105,3 +105,12 @@ def main(zipped=True):
         )
 
     input('Press ENTER to quit.')
+
+
+def main(zipped=True):
+    try:
+        install(zipped)
+    except Exception as ex:
+        print(str(ex))
+        input('Press ENTER to quit.')
+
