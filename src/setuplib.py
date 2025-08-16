@@ -18,7 +18,7 @@ import zipfile
 from nv_dark import Plugin
 
 PLUGIN = 'nv_dark.py'
-VERSION = ' @release'
+VERSION = '@release'
 THEMES_PATH = 'themes/'
 
 pyz = os.path.dirname(__file__)
