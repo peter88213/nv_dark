@@ -55,8 +55,8 @@ class Plugin:
         color_on_schedule='white',
         color_outline='orchid2',
         color_stage='tomato',
-        color_text_bg='#33393b',
-        color_text_fg='light grey',
+        color_text_bg='#191c1d',
+        color_text_fg='#b3b3b3',
         color_unused='gray',)
 
     def install(self, model, view, controller):
