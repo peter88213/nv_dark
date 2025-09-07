@@ -8,7 +8,7 @@
 
 The [novelibre](https://github.com/peter88213/novelibre/) Python program helps authors organize novels.  
 
-*nv_dark* is a plugin providing a dark theme for novelibre. 
+*nv_dark* is a plugin providing a dark mode for novelibre. 
 
 ![Screenshot](docs/Screenshots/screen01.jpg)
 

@@ -2,7 +2,7 @@
 
 --- 
 
-A [novelibre](https://github.com/peter88213/novelibre/) plugin providing a dark theme. 
+A [novelibre](https://github.com/peter88213/novelibre/) plugin providing a dark mode. 
 
 ---
 
