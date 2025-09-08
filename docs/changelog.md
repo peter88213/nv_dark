@@ -5,6 +5,13 @@
 ## Changelog
 
 
+### Version 0.5.0
+
+- Added to SETTINGS: "color_locked_bg".
+
+Compatibility: novelibre version 5.36 API
+
+
 ### Version 0.4.0
 
 - Providing a Help menu entry.

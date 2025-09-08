@@ -25,7 +25,7 @@ from tkinter import messagebox
 
 class Plugin:
     VERSION = '@release'
-    API_VERSION = '5.4'
+    API_VERSION = '5.36'
     DESCRIPTION = 'Applies the tcl awdark theme, if available'
     URL = 'https://github.com/peter88213/nv_dark'
 
@@ -44,6 +44,7 @@ class Plugin:
         color_comment_tag='wheat4',
         color_done='DarkGoldenrod4',
         color_draft='white',
+        color_inactive_bg='#394341',
         color_locked_bg='dim gray',
         color_locked_fg='light gray',
         color_major='SteelBlue1',
@@ -56,7 +57,7 @@ class Plugin:
         color_outline='orchid2',
         color_stage='tomato',
         color_text_bg='#33393b',
-        color_text_fg='light grey',
+        color_text_fg='light gray',
         color_unused='gray',)
 
     def install(self, model, view, controller):
