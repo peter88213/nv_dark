@@ -38,16 +38,15 @@ Download the latest release [nv_dark_v0.5.0.pyz](https://github.com/peter88213/n
 - Launch *nv_dark_v0.5.0.pyz* by double-clicking (Windows desktop),
 - or execute `python nv_dark_v0.5.0.pyz` (Windows), resp. `python3 nv_dark_v0.5.0.pyz` (Linux) on the command line.
 
-#### Important
-
-Many web browsers recognize the download as an executable file and offer to open it immediately. 
-This starts the installation under Windows.
-
-However, depending on your security settings, your browser may 
-initially  refuse  to download the executable file. 
-In this case, your confirmation or an additional action is required. 
-If this is not possible, you have the option of downloading 
-the zip file. 
+> [!IMPORTANT]
+> Many web browsers recognize the download as an executable file and offer to open it immediately. 
+> This starts the installation under Windows.
+> 
+> However, depending on your security settings, your browser may 
+> initially  refuse  to download the executable file. 
+> In this case, your confirmation or an additional action is required. 
+> If this is not possible, you have the option of downloading 
+> the zip file. 
 
 
 ### Alternative: Zip file
