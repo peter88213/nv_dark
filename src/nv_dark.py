@@ -25,7 +25,7 @@ from tkinter import messagebox
 
 class Plugin:
     VERSION = '@release'
-    API_VERSION = '5.36'
+    API_VERSION = '5.43'
     DESCRIPTION = 'Applies the tcl awdark theme, if available'
     URL = 'https://github.com/peter88213/nv_dark'
 
@@ -102,3 +102,23 @@ class Plugin:
 
     def open_help(self):
         webbrowser.open(self.HELP_URL)
+
+    def uninstall(self):
+        """Remove custom colors from the preferences."""
+        prefs = self._ctrl.get_preferences()
+        newPrefs = {}
+        for key in prefs:
+            if not key.startswith('color_'):
+                newPrefs[key] = prefs[key]
+        prefs = newPrefs
+
+        homePath = str(Path.home()).replace('\\', '/')
+        configFile = f'{homePath}/.novx/config/novx.ini'
+        with open(configFile, 'r', encoding='utf-8') as f:
+            lines = f.read().split('\n')
+        newlines = []
+        for line in lines:
+            if not line.startswith('color_'):
+                newlines.append(line)
+        with open(configFile, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(newlines))

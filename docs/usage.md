@@ -19,8 +19,7 @@ The plugin adds a **nv_dark Online Help** entry to the **Help** menu.
 
 # Restoring the original colors
 
-After uninstalling the *nv_dark* plugin via the plugin manager, close *novelibre*.
-Then open the installation directory and run `restore_default_colors.py`. 
+After uninstalling the *nv_dark* plugin via the plugin manager, restart *novelibre*.
 
 ---
 
