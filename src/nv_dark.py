@@ -32,44 +32,45 @@ class Plugin:
 
     HELP_URL = 'https://peter88213.github.io/nv_dark/help/'
 
+    COLORS = dict(
+        color_1st_edit='DarkGoldenrod2',
+        color_2nd_edit='DarkGoldenrod3',
+        color_arc='plum',
+        color_before_schedule='sea green',
+        color_behind_schedule='tomato',
+        color_chapter='chartreuse',
+        color_comment_tag='wheat4',
+        color_done='DarkGoldenrod4',
+        color_draft='white',
+        color_inactive_bg='#394341',
+        color_locked_bg='dim gray',
+        color_locked_fg='light gray',
+        color_major='SteelBlue1',
+        color_minor='SteelBlue',
+        color_modified_bg='goldenrod1',
+        color_modified_fg='maroon',
+        color_notes_bg='wheat4',
+        color_notes_fg='white',
+        color_on_schedule='white',
+        color_outline='orchid2',
+        color_stage='tomato',
+        color_status_error_bg='red',
+        color_status_error_fg='white',
+        color_status_notification_bg='yellow',
+        color_status_notification_fg='black',
+        color_status_success_bg='green',
+        color_status_success_fg='white',
+        color_text_bg='#33393b',
+        color_text_fg='light gray',
+        color_unused='gray',
+        color_xml_tag='cornflower blue',
+    )
+
     def install(self, model, view, controller):
         """Install and apply the 'awdark' theme."""
         THEME_DIR = '.novx/themes'
         THEME_PACKAGE = 'awthemes'
         THEME = 'awdark'
-        DARK_MODE_COLORS = dict(
-            color_1st_edit='DarkGoldenrod2',
-            color_2nd_edit='DarkGoldenrod3',
-            color_arc='plum',
-            color_before_schedule='sea green',
-            color_behind_schedule='tomato',
-            color_chapter='chartreuse',
-            color_comment_tag='wheat4',
-            color_done='DarkGoldenrod4',
-            color_draft='white',
-            color_inactive_bg='#394341',
-            color_locked_bg='dim gray',
-            color_locked_fg='light gray',
-            color_major='SteelBlue1',
-            color_minor='SteelBlue',
-            color_modified_bg='goldenrod1',
-            color_modified_fg='maroon',
-            color_notes_bg='wheat4',
-            color_notes_fg='white',
-            color_on_schedule='white',
-            color_outline='orchid2',
-            color_stage='tomato',
-            color_status_error_bg='red',
-            color_status_error_fg='white',
-            color_status_notification_bg='yellow',
-            color_status_notification_fg='black',
-            color_status_success_bg='green',
-            color_status_success_fg='white',
-            color_text_bg='#33393b',
-            color_text_fg='light gray',
-            color_unused='gray',
-            color_xml_tag='cornflower blue',
-        )
         self._ui = view
         self._ctrl = controller
 
@@ -92,9 +93,9 @@ class Plugin:
         #       and delete novx.ini.
         prefs = self._ctrl.get_preferences()
         colorsChanged = False
-        for color in DARK_MODE_COLORS:
-            if prefs[color] != DARK_MODE_COLORS[color]:
-                prefs[color] = DARK_MODE_COLORS[color]
+        for color in self.COLORS:
+            if prefs[color] != self.COLORS[color]:
+                prefs[color] = self.COLORS[color]
                 colorsChanged = True
         if colorsChanged:
             messagebox.showinfo(

@@ -5,7 +5,7 @@
 ## Changelog
 
 
-### Version 0.6.0
+### Version 0.6.1
 
 - Restoring the default colors when uninstalling the plugin (#3).
 
