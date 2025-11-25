@@ -17,10 +17,11 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 """
-import webbrowser
-
 from pathlib import Path
 from tkinter import messagebox
+import webbrowser
+
+from nvlib.gui.default_colors import DEFAULT_COLORS
 
 
 class Plugin:
@@ -31,50 +32,57 @@ class Plugin:
 
     HELP_URL = 'https://peter88213.github.io/nv_dark/help/'
 
-    THEME_DIR = '.novx/themes'
-    THEME_PACKAGE = 'awthemes'
-    THEME = 'awdark'
-    COLORS = dict(
-        color_1st_edit='DarkGoldenrod2',
-        color_2nd_edit='DarkGoldenrod3',
-        color_arc='plum',
-        color_before_schedule='sea green',
-        color_behind_schedule='tomato',
-        color_chapter='chartreuse',
-        color_comment_tag='wheat4',
-        color_done='DarkGoldenrod4',
-        color_draft='white',
-        color_inactive_bg='#394341',
-        color_locked_bg='dim gray',
-        color_locked_fg='light gray',
-        color_major='SteelBlue1',
-        color_minor='SteelBlue',
-        color_modified_bg='goldenrod1',
-        color_modified_fg='maroon',
-        color_notes_bg='wheat4',
-        color_notes_fg='white',
-        color_on_schedule='white',
-        color_outline='orchid2',
-        color_stage='tomato',
-        color_text_bg='#33393b',
-        color_text_fg='light gray',
-        color_unused='gray',)
-
     def install(self, model, view, controller):
         """Install and apply the 'awdark' theme."""
+        THEME_DIR = '.novx/themes'
+        THEME_PACKAGE = 'awthemes'
+        THEME = 'awdark'
+        DARK_MODE_COLORS = dict(
+            color_1st_edit='DarkGoldenrod2',
+            color_2nd_edit='DarkGoldenrod3',
+            color_arc='plum',
+            color_before_schedule='sea green',
+            color_behind_schedule='tomato',
+            color_chapter='chartreuse',
+            color_comment_tag='wheat4',
+            color_done='DarkGoldenrod4',
+            color_draft='white',
+            color_inactive_bg='#394341',
+            color_locked_bg='dim gray',
+            color_locked_fg='light gray',
+            color_major='SteelBlue1',
+            color_minor='SteelBlue',
+            color_modified_bg='goldenrod1',
+            color_modified_fg='maroon',
+            color_notes_bg='wheat4',
+            color_notes_fg='white',
+            color_on_schedule='white',
+            color_outline='orchid2',
+            color_stage='tomato',
+            color_status_error_bg='red',
+            color_status_error_fg='white',
+            color_status_notification_bg='yellow',
+            color_status_notification_fg='black',
+            color_status_success_bg='green',
+            color_status_success_fg='white',
+            color_text_bg='#33393b',
+            color_text_fg='light gray',
+            color_unused='gray',
+            color_xml_tag='cornflower blue',
+        )
         self._ui = view
         self._ctrl = controller
 
         # Load custom theme. Exceptions are caught by the application.
         homeDir = str(Path.home()).replace('\\', '/')
-        themePath = f'{homeDir}/{self.THEME_DIR}'
+        themePath = f'{homeDir}/{THEME_DIR}'
         self._ui.root.tk.call(
             'lappend',
             'auto_path',
-            f'{themePath}/{self.THEME_PACKAGE}',
+            f'{themePath}/{THEME_PACKAGE}',
         )
-        self._ui.root.tk.call('package', 'require', self.THEME)
-        self._ui.guiStyle.theme_use(self.THEME)
+        self._ui.root.tk.call('package', 'require', THEME)
+        self._ui.guiStyle.theme_use(THEME)
 
         # Adjust the colors. This will take effect after restart.
         # Note: The changes wil be stored in the novx.ini file
@@ -84,9 +92,9 @@ class Plugin:
         #       and delete novx.ini.
         prefs = self._ctrl.get_preferences()
         colorsChanged = False
-        for color in self.COLORS:
-            if prefs[color] != self.COLORS[color]:
-                prefs[color] = self.COLORS[color]
+        for color in DARK_MODE_COLORS:
+            if prefs[color] != DARK_MODE_COLORS[color]:
+                prefs[color] = DARK_MODE_COLORS[color]
                 colorsChanged = True
         if colorsChanged:
             messagebox.showinfo(
@@ -104,21 +112,7 @@ class Plugin:
         webbrowser.open(self.HELP_URL)
 
     def uninstall(self):
-        """Remove custom colors from the preferences."""
+        """Reset the preferences to default colors."""
         prefs = self._ctrl.get_preferences()
-        newPrefs = {}
-        for key in prefs:
-            if not key.startswith('color_'):
-                newPrefs[key] = prefs[key]
-        prefs = newPrefs
-
-        homePath = str(Path.home()).replace('\\', '/')
-        configFile = f'{homePath}/.novx/config/novx.ini'
-        with open(configFile, 'r', encoding='utf-8') as f:
-            lines = f.read().split('\n')
-        newlines = []
-        for line in lines:
-            if not line.startswith('color_'):
-                newlines.append(line)
-        with open(configFile, 'w', encoding='utf-8') as f:
-            f.write('\n'.join(newlines))
+        for color in DEFAULT_COLORS:
+            prefs[color] = DEFAULT_COLORS[color]

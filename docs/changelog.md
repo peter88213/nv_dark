@@ -5,6 +5,13 @@
 ## Changelog
 
 
+### Version 0.6.0
+
+- Restoring the default colors when uninstalling the plugin (#3).
+
+Compatibility: novelibre version 5.43 API
+
+
 ### Version 0.5.0
 
 - Added to SETTINGS: "color_locked_bg".
