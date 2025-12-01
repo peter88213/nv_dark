@@ -5,6 +5,13 @@
 ## Changelog
 
 
+### Version 0.7.0
+
+- Adapting the toolbar separators.
+
+Compatibility: novelibre version 5.44 API
+
+
 ### Version 0.6.1
 
 - Restoring the default colors when uninstalling the plugin (#3).

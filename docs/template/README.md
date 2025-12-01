@@ -25,7 +25,7 @@ plugin in combination with the *ttkthemes* package does.
 
 ## Requirements
 
-- [novelibre](https://github.com/peter88213/novelibre/) version 5.43+
+- [novelibre](https://github.com/peter88213/novelibre/) version 5.44+
 - If the *nv_themes* plugin is installed, it will be removed during installation.
 
 

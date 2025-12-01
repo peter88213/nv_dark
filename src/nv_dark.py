@@ -26,7 +26,7 @@ from nvlib.gui.default_colors import DEFAULT_COLORS
 
 class Plugin:
     VERSION = '@release'
-    API_VERSION = '5.43'
+    API_VERSION = '5.44'
     DESCRIPTION = 'Applies the tcl awdark theme, if available'
     URL = 'https://github.com/peter88213/nv_dark'
 
@@ -53,6 +53,7 @@ class Plugin:
         color_notes_fg='white',
         color_on_schedule='white',
         color_outline='orchid2',
+        color_separator='black',
         color_stage='tomato',
         color_status_error_bg='red',
         color_status_error_fg='white',
