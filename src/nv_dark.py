@@ -26,7 +26,7 @@ from nvlib.gui.default_colors import DEFAULT_COLORS
 
 class Plugin:
     VERSION = '@release'
-    API_VERSION = '5.44'
+    API_VERSION = '5.45'
     DESCRIPTION = 'Applies the tcl awdark theme, if available'
     URL = 'https://github.com/peter88213/nv_dark'
 
@@ -42,6 +42,7 @@ class Plugin:
         color_comment_tag='wheat4',
         color_done='DarkGoldenrod4',
         color_draft='white',
+        color_highlight='dark slate gray',
         color_inactive_bg='#394341',
         color_locked_bg='dim gray',
         color_locked_fg='light gray',

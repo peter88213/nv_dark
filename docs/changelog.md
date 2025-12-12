@@ -5,6 +5,13 @@
 ## Changelog
 
 
+### Version 0.8.0
+
+Added color for highlighting sections. 
+
+Compatibility: novelibre version 5.45 API
+
+
 ### Version 0.7.0
 
 - Adapting the toolbar separators.
