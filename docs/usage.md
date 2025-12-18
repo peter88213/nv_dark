@@ -17,7 +17,7 @@ The plugin adds a **nv_dark Online Help** entry to the **Help** menu.
 
 ---
 
-# Restoring the original colors
+## How to restore the original colors
 
 After uninstalling the *nv_dark* plugin via the plugin manager, restart *novelibre*.
 
@@ -26,6 +26,8 @@ After uninstalling the *nv_dark* plugin via the plugin manager, restart *novelib
 ## Credits
 
 - The included *awdark* Theme is from the [tcl-awthemes](https://sourceforge.net/projects/tcl-awthemes/) package. 
+
+---
 
 # License
 

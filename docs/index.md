@@ -11,4 +11,10 @@ A [novelibre](https://github.com/peter88213/novelibre/) plugin providing a dark 
 
 ---
 
+## Credits
+
+- The included *awdark* Theme is from the [tcl-awthemes](https://sourceforge.net/projects/tcl-awthemes/) package. 
+
+---
+
 Copyright (c) 2025 by Peter Triesberger. All rights reserved.

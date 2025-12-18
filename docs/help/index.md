@@ -17,7 +17,7 @@ you might be asked for a program restart to set the
 
 ---
 
-## Restoring the original colors
+## How to restore the original colors
 
 After uninstalling the *nv_dark* plugin via the plugin manager, restart *novelibre*.
 
