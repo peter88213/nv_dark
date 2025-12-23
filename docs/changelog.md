@@ -5,6 +5,13 @@
 ## Changelog
 
 
+### Version 0.8.1
+
+- Removed unused files from the awthemes package.
+
+Compatibility: novelibre version 5.45 API
+
+
 ### Version 0.8.0
 
 Added color for highlighting sections. 
