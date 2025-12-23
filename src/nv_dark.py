@@ -87,12 +87,7 @@ class Plugin:
         self._ui.root.tk.call('package', 'require', THEME)
         self._ui.guiStyle.theme_use(THEME)
 
-        # Adjust the colors. This will take effect after restart.
-        # Note: The changes wil be stored in the novx.ini file
-        #       in the novelibre/config directory.
-        #       To restore the default colors,
-        #       you will have to close novelibre
-        #       and delete novx.ini.
+        # If the setup script has not already done so, adjust the colors.
         prefs = self._ctrl.get_preferences()
         colorsChanged = False
         for color in self.COLORS:
