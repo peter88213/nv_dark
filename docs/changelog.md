@@ -5,9 +5,10 @@
 ## Changelog
 
 
-### Version 0.8.1
+### Version 0.8.2
 
 - Removed unused files from the awthemes package.
+- Plugin.uninstall() removes the theme directory. 
 
 Compatibility: novelibre version 5.45 API
 

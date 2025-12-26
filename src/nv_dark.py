@@ -18,6 +18,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 """
 from pathlib import Path
+import shutil
 from tkinter import messagebox
 import webbrowser
 
@@ -78,11 +79,11 @@ class Plugin:
 
         # Load custom theme. Exceptions are caught by the application.
         homeDir = str(Path.home()).replace('\\', '/')
-        themePath = f'{homeDir}/{THEME_DIR}'
+        self.themePath = f'{homeDir}/{THEME_DIR}/{THEME_PACKAGE}'
         self._ui.root.tk.call(
             'lappend',
             'auto_path',
-            f'{themePath}/{THEME_PACKAGE}',
+            self.themePath,
         )
         self._ui.root.tk.call('package', 'require', THEME)
         self._ui.guiStyle.theme_use(THEME)
@@ -114,3 +115,4 @@ class Plugin:
         prefs = self._ctrl.get_preferences()
         for color in DEFAULT_COLORS:
             prefs[color] = DEFAULT_COLORS[color]
+        shutil.rmtree(self.themePath, ignore_errors=True)

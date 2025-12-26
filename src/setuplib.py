@@ -11,6 +11,7 @@ import os
 from pathlib import Path
 from shutil import copy2
 from shutil import copytree
+import shutil
 import sys
 from tkinter import messagebox
 import zipfile
@@ -19,7 +20,8 @@ from nv_dark import Plugin
 
 PLUGIN = 'nv_dark.py'
 VERSION = '@release'
-THEMES_PATH = 'themes/'
+THEME_DIR = 'themes'
+THEME_PACKAGE = 'awthemes'
 
 pyz = os.path.dirname(__file__)
 
@@ -85,7 +87,11 @@ def install(zipped):
         copy_file(PLUGIN, pluginDir)
 
         # Install the themes.
-        copy_tree('themes', applicationDir)
+        shutil.rmtree(
+            f'{applicationDir}/{THEME_DIR}/{THEME_PACKAGE}',
+            ignore_errors=True
+        )
+        copy_tree(THEME_DIR, applicationDir)
 
         # Install utility.
         copy_file('restore_default_colors.py', applicationDir)
