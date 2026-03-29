@@ -27,7 +27,7 @@ from nvlib.gui.default_colors import DEFAULT_COLORS
 
 class Plugin:
     VERSION = '@release'
-    API_VERSION = '5.45'
+    API_VERSION = '5.55'
     DESCRIPTION = 'Applies the tcl awdark theme, if available'
     URL = 'https://github.com/peter88213/nv_dark'
 
@@ -36,7 +36,6 @@ class Plugin:
     COLORS = dict(
         color_1st_edit='DarkGoldenrod2',
         color_2nd_edit='DarkGoldenrod3',
-        color_arc='plum',
         color_before_schedule='sea green',
         color_behind_schedule='tomato',
         color_chapter='chartreuse',
@@ -47,8 +46,6 @@ class Plugin:
         color_inactive_bg='#394341',
         color_locked_bg='dim gray',
         color_locked_fg='light gray',
-        color_major='SteelBlue1',
-        color_minor='SteelBlue',
         color_modified_bg='goldenrod1',
         color_modified_fg='maroon',
         color_notes_bg='wheat4',
