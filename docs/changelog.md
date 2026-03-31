@@ -5,6 +5,13 @@
 ## Changelog
 
 
+### Version 0.8.3
+
+- Removed colors that are no longer used with novelibre 5.55+.
+
+Compatibility: novelibre version 5.55 API
+
+
 ### Version 0.8.2
 
 - Removed unused files from the awthemes package.
