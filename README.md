@@ -33,7 +33,7 @@ plugin in combination with the *ttkthemes* package does.
 
 ### Default: Executable Python zip archive
 
-Download the latest release [nv_dark_v0.8.3.pyz](https://github.com/peter88213/nv_dark/raw/main/dist/nv_dark_v0.8.3.pyz)
+Download the latest release [nv_dark_v0.8.3.pyz](https://github.com/peter88213/nv_dark/raw/main/dist/nv_dark_v0.8.3.pyz) (67 KB)
 
 - Launch *nv_dark_v0.8.3.pyz* by double-clicking (Windows desktop),
 - or execute `python nv_dark_v0.8.3.pyz` (Windows), resp. `python3 nv_dark_v0.8.3.pyz` (Linux) on the command line.
@@ -51,7 +51,7 @@ Download the latest release [nv_dark_v0.8.3.pyz](https://github.com/peter88213/n
 
 ### Alternative: Zip file
 
-The package is also available in zip format: [nv_dark_v0.8.3.zip](https://github.com/peter88213/nv_dark/raw/main/dist/nv_dark_v0.8.3.zip)
+The package is also available in zip format: [nv_dark_v0.8.3.zip](https://github.com/peter88213/nv_dark/raw/main/dist/nv_dark_v0.8.3.zip) (67 KB)
 
 - Extract the *nv_dark_v0.8.3* folder from the downloaded zipfile "nv_dark_v0.8.3.zip".
 - Move into this new folder and launch *setup.py* by double-clicking (Windows/Linux desktop), 
