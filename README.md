@@ -12,16 +12,11 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 
 ![Screenshot](docs/Screenshots/screen01.jpg)
 
----
-
-#### Note 
-
-The dark mode is still in the experimental stage. Some display elements do not yet adapt correctly, 
-which requires changes to the *novelibre* application. It is quite possible that this will be fixed over time.
-Nevertheless, *nv_dark* already offers a better dark mode than the [nv_themes](https://github.com/peter88213/nv_themes) 
-plugin in combination with the *ttkthemes* package does.
-
----
+> [!NOTE]
+> The dark mode is still in the experimental stage. Some display elements do not yet adapt correctly, 
+> which requires changes to the *novelibre* application. It is quite possible that this will be fixed over time.
+> Nevertheless, *nv_dark* already offers a better dark mode than the [nv_themes](https://github.com/peter88213/nv_themes) 
+> plugin in combination with the *ttkthemes* package does.
 
 ## Requirements
 
