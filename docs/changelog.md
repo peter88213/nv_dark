@@ -5,6 +5,15 @@
 ## Changelog
 
 
+### Version 5.0.0
+
+- Using the novelibre 5.63+ help service.
+- Refactored the code
+
+API: 5.63
+Based on novelibre 5.63.1
+
+
 ### Version 0.8.3
 
 - Removed colors that are no longer used with novelibre 5.55+.

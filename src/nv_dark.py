@@ -3,7 +3,7 @@
 Applies the 'awdark' theme, if available. 
 
 Requires Python 3.7+
-Copyright (c) 2025 Peter Triesberger
+Copyright (c) Peter Triesberger
 For further information see https://github.com/peter88213/nv_dark
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 
@@ -20,18 +20,18 @@ GNU General Public License for more details.
 from pathlib import Path
 import shutil
 from tkinter import messagebox
-import webbrowser
 
+from nvlib.controller.plugin.plugin_base import PluginBase
 from nvlib.gui.default_colors import DEFAULT_COLORS
 
 
-class Plugin:
+class Plugin(PluginBase):
     VERSION = '@release'
-    API_VERSION = '5.55'
+    API_VERSION = '5.63'
     DESCRIPTION = 'Applies the tcl awdark theme, if available'
     URL = 'https://github.com/peter88213/nv_dark'
-
-    HELP_URL = 'https://peter88213.github.io/nv_dark/help/'
+    HELP_SITE = 'https://peter88213.github.io/nv_dark'
+    HELP_PAGE = 'help'
 
     COLORS = dict(
         color_1st_edit='DarkGoldenrod2',
@@ -68,11 +68,10 @@ class Plugin:
 
     def install(self, model, view, controller):
         """Install and apply the 'awdark' theme."""
+        super().install(model, view, controller)
         THEME_DIR = '.novx/themes'
         THEME_PACKAGE = 'awthemes'
         THEME = 'awdark'
-        self._ui = view
-        self._ctrl = controller
 
         # Load custom theme. Exceptions are caught by the application.
         homeDir = str(Path.home()).replace('\\', '/')
@@ -98,14 +97,9 @@ class Plugin:
                 'Please restart novelibre now to apply changed colors.'
             )
 
-        # Add an entry to the Help menu.
-        self._ui.helpMenu.add_command(
-            label='nv_dark Online help',
-            command=self.open_help,
-        )
+        #--- Configure the user interface.
 
-    def open_help(self):
-        webbrowser.open(self.HELP_URL)
+        self._add_help_menu_entry('nv_dark plugin help')
 
     def uninstall(self):
         """Reset the preferences to default colors."""
