@@ -5,13 +5,13 @@
 ## Changelog
 
 
-### Version 5.0.0
+### Version 5.0.1
 
 - Using the novelibre 5.63+ help service.
 - Refactored the code
 
 API: 5.63
-Based on novelibre 5.63.1
+Based on novelibre 5.63.2
 
 
 ### Version 0.8.3
