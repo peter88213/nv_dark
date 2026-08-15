@@ -5,12 +5,12 @@
 ## Changelog
 
 
-### Version 5.0.2
+### Version 5.0.3
 
 - Replaced tk color names with hex triple strings.
 
 API: 5.63
-Based on novelibre 5.64.0
+Based on novelibre 5.64.3
 
 
 ### Version 5.0.1

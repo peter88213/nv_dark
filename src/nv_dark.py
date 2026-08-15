@@ -58,7 +58,7 @@ class Plugin(PluginBase):
         color_status_error_fg='#ffffff',  # white
         color_status_notification_bg='#ffff00',  # yellow
         color_status_notification_fg='#000000',  # black
-        color_status_success_bg='#00ff00',  # green
+        color_status_success_bg='#008b00',  # green4
         color_status_success_fg='#ffffff',  # white
         color_text_bg='#33393b',
         color_text_fg='#d3d3d3',  # light gray
