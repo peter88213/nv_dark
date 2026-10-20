@@ -59,7 +59,6 @@ See the [novelibre CONTRIBUTING page](https://github.com/peter88213/novelibre/bl
 ```
 .
 ├── novelibre/
-│   ├── i18n/
 │   ├── src/
 │   │   └── nvlib/
 │   └── tools/ 
@@ -69,10 +68,8 @@ See the [novelibre CONTRIBUTING page](https://github.com/peter88213/novelibre/bl
 │       ├── pgettext.py
 │       ├── translate_de.py
 │       └── translations.py
-└── nv_collection/
-    ├── i18n/
+└── nv_dark/
     ├── src/
-	 │   └── nvcollectionlib/
     └── tools/ 
         └── build.py
 ```
