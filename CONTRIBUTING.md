@@ -15,12 +15,8 @@ Please be sure to follow the
 │   ├── src/
 │   │   └── nvlib/
 │   └── tools/ 
-│       ├── msgfmt.py
 │       ├── inliner.py
-│       ├── package_builder.py
-│       ├── pgettext.py
-│       ├── translate_de.py
-│       └── translations.py
+│       └── package_builder.py
 └── nv_dark/
     ├── src/
     └── tools/ 
