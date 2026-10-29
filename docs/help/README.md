@@ -23,4 +23,4 @@ After uninstalling the *nv_dark* plugin via the plugin manager, restart *novelib
 
 ---
 
-Copyright (c) by Peter Triesberger. All rights reserved.
+Copyright (c) 2025 by Peter Triesberger. All rights reserved.
