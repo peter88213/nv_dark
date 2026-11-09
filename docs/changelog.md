@@ -7,6 +7,14 @@
 
 ### Version 5.0.3
 
+- Checking the Tcl/Tk version.
+
+API: 5.63
+Based on novelibre 5.66.9
+
+
+### Version 5.0.3
+
 - Replaced tk color names with hex triple strings.
 
 API: 5.63
