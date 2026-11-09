@@ -21,6 +21,7 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 
 ## Requirements
 
+- Python 3.7 - 3.13 with tcl 8.x. *The plugin seems not to work with tcl 9.x* 
 - [novelibre](https://github.com/peter88213/novelibre/) version $ApiVersion+
 - If the *nv_themes* plugin is installed, it will be removed during installation.
 
