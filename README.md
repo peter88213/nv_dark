@@ -21,7 +21,7 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 
 ## Requirements
 
-- Python 3.7 - 3.13 with tcl 8.x. *The plugin seems not to work with tcl 9.x* (see issue #4).
+- Python 3.7 - 3.13 with tcl 8.x. *The plugin seems not to work with tcl 9.x* (see [issue #4](https://github.com/peter88213/nv_dark/issues/4)).
 - [novelibre](https://github.com/peter88213/novelibre/) version 5.63+ 
 - If the *nv_themes* plugin is installed, it will be removed during installation.
 
