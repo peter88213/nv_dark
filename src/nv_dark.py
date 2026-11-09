@@ -23,6 +23,7 @@ from tkinter import messagebox
 
 from nvlib.controller.plugin.plugin_base import PluginBase
 from nvlib.gui.default_colors import DEFAULT_COLORS
+import tkinter as tk
 
 
 class Plugin(PluginBase):
@@ -76,6 +77,13 @@ class Plugin(PluginBase):
         # Load custom theme. Exceptions are caught by the application.
         homeDir = str(Path.home()).replace('\\', '/')
         self.themePath = f'{homeDir}/{THEME_DIR}/{THEME_PACKAGE}'
+
+        if tk.TkVersion >= 9.0:
+            self.uninstall()
+            raise RuntimeError(
+                f'Incompatible Tcl/Tk version: {tk.TkVersion}'
+            )
+
         self._ui.root.tk.call(
             'lappend',
             'auto_path',
