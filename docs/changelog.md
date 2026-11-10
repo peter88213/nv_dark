@@ -5,12 +5,12 @@
 ## Changelog
 
 
-### Version 5.0.4
+### Version 5.0.5
 
 - Checking the Tcl/Tk version.
 
-API: 5.63
-Based on novelibre 5.66.9
+API: 5.67
+Based on novelibre 5.67.4
 
 
 ### Version 5.0.3
