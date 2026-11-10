@@ -15,7 +15,7 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 > [!NOTE]
 > This plugin will be discontinued as the included *awthemes* package is no longer being maintained.
 > Instead of this plugin, you might want to install the [nv_themes](https://github.com/peter88213/nv_themes)
-> plugin in combination with the [ttkthemes](https://ttkthemes.readthedocs.io/en/latest/themes.html)
+> plugin in combination with the [ttkthemes](https://ttkthemes.readthedocs.io/en/latest/themes.html#black)
 > package, which offers an equally good dark mode.
 
 
