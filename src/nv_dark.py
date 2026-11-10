@@ -28,7 +28,7 @@ import tkinter as tk
 
 class Plugin(PluginBase):
     VERSION = '@release'
-    API_VERSION = '5.63'
+    API_VERSION = '5.67'
     DESCRIPTION = 'Applies the tcl awdark theme, if available'
     URL = 'https://github.com/peter88213/nv_dark'
     HELP_SITE = 'https://peter88213.github.io/nv_dark'
@@ -79,7 +79,6 @@ class Plugin(PluginBase):
         self.themePath = f'{homeDir}/{THEME_DIR}/{THEME_PACKAGE}'
 
         if tk.TkVersion >= 9.0:
-            self.uninstall()
             raise RuntimeError(
                 f'Incompatible Tcl/Tk version: {tk.TkVersion}'
             )
